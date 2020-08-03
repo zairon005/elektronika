@@ -27,10 +27,18 @@
     background-color: $dark;
     width: 270px;
     display: none;
-
+    @media (min-width: $sizeDesktop){
+        display: block;
+        &__toggle{
+        display: none;
+        }
+    }
 }
 .top-contacts{
     display: none;
+    @media (min-width: $sizeDesktop){
+        display: block;
+    }
 }
 .basket{
     &__hover-block{
@@ -38,7 +46,7 @@
     }
 }
 .button-menu{
-    grid-column: 4/5;
+    grid-column: -1/-2;
     display: flex;
     justify-content: flex-end;
     &__toggle{
@@ -64,21 +72,13 @@
                         0 12px 0 0 $dark;
         }
     }
-}
-@media (min-width: $sizeTable){
-    
-}
-@media (min-width: $sizeDesktop){
-    .top-contacts{
-        display: block;
-    }
-    .top-menu{
-        display: block;
-        &__toggle{
+    @media (min-width: $sizeDesktop){
         display: none;
-        }
     }
-    .button-menu{
-        display: none;
+}
+.catalog-nav{
+    display: none;
+    @media (min-width: $sizeDesktop){
+        display: block;
     }
 }
