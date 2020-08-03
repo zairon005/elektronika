@@ -1,0 +1,5 @@
+@media (min-width: $sizeTable){
+    .container{
+        @include container($containerTablet, $colCountTable, $gridGapMobile);
+    }
+}

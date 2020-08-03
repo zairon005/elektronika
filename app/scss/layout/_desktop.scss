@@ -1,0 +1,5 @@
+@media (min-width: $sizeDesktop){
+    .container{
+        @include container($containerDesktop, $colCountDesktop, $gridGap);
+    }
+}
