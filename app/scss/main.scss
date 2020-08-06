@@ -4,8 +4,22 @@
 @import "layout/module";
 
 @import
+    "../../node_modules/slick-carousel/slick/slick.scss", //Slick-carousel
+    "../../node_modules/slick-carousel/slick/slick-theme.scss", //Slick-carousel
+    "components/slider-banner",
+    "components/catalog-item";
+
+@import
     "components/header",
-    "components/banner";
+    "components/banner",
+    "components/features",
+    "components/hot-news",
+    "components/banner-2",
+    "components/may-be-useful",
+    "components/categories",
+    "components/brands",
+    "components/watched",
+    "components/footer";
 
 
 

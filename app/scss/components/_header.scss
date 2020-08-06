@@ -1,6 +1,5 @@
 .header{
-    grid-column: span $colCountMobile+2;
-    background-color: #f00;
+    width: 100%;
 }
 .white-menu{
     height: 80px;
@@ -78,7 +77,18 @@
 }
 .catalog-nav{
     display: none;
+    @media (min-width: $sizeTable){
+        display: block;
+    }
     @media (min-width: $sizeDesktop){
         display: block;
+    }
+}
+.mobile-menu{
+    &--closed{
+        display: none;
+    }
+    @media (min-width: $sizeDesktop){
+        display: none;
     }
 }

@@ -9,7 +9,8 @@ let paths = {
 
     scripts: {
         src: [
-            'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/slick-carousel/slick/slick.js', //Slick-carousel
             baseDir + '/js/script.js' // Always at the end
         ],
         dest: baseDir + '/js',
