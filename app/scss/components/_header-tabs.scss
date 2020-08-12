@@ -1,0 +1,27 @@
+.header-tabs{
+    &__list{
+        list-style: none;
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+        align-items: baseline;       
+    }
+
+    &__item{
+        margin-right: 25px;
+        margin-bottom: 10px;
+        color: $charcoal-grey;
+        letter-spacing: 0.35px;
+
+        &--active{
+            background-color: $red;
+            border-radius: 5px;
+            color: $white;
+            padding: 3px;
+        }
+
+        & span{
+            white-space: nowrap;
+        }
+    }
+}

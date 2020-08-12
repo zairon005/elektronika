@@ -25,8 +25,8 @@ $containerDesktop: 1160px;
 $sizeDesktop: 1200px;
 $colCountDesktop: 12;
 $containerTablet: 620px;
-$sizeTable: 660px;
-$colCountTable: 8;
+$sizeTablet: 660px;
+$colCountTablet: 8;
 $containerMobile: 300px;
 $colCountMobile: 4;
 $colSize: 60px;
@@ -58,6 +58,7 @@ body{
     font-family: $montserat;
 	font-size: $fontsize;
     color: $textColor;
+    letter-spacing: 0.35px;
 }
 
 .visually-hidden:not(:focus):not(:active) {

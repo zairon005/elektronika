@@ -1,0 +1,56 @@
+.basket{
+    grid-column: -2/-3;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    @media screen and (min-width: $sizeDesktop) {
+        grid-column: -1/-2;
+    }
+
+    &__count{
+        width: 18px;
+        height: 18px;
+        background-color: $red;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        right: -11px;
+        top: -5px;
+        color: $white;
+        font-size: 12px;
+        text-align: center;
+        line-height: 18px;
+        padding-left: 2px;
+
+        @media screen and (min-width: $sizeDesktop){
+            right: -12px;
+            top: -7px;
+        }
+    }
+
+    &__value{
+        color: $charcoal-grey;
+        font-size: 14px;
+        white-space: nowrap;
+        padding-top: 5px;
+        display: none;
+
+        @media screen and (min-width: $sizeDesktop) {
+            display: block;
+        }
+    }
+
+    &__hover-block{
+        display: none;
+    }
+
+    &__link{        
+        position: relative;
+
+        @media screen and (min-width: $sizeDesktop) {
+            margin-right: 20px;
+        }
+    }
+}

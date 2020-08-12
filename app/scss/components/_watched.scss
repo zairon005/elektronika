@@ -1,0 +1,9 @@
+.watched{
+    background-color: $not-white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    & .catalog-item{
+        background-color: $white;
+    }
+}

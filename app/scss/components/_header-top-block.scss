@@ -1,0 +1,32 @@
+.header-top-block{
+    grid-column: 1/-1;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $sizeDesktop){
+        // margin-bottom: 40px;
+    }
+    
+    & h2{
+        color: $dark;
+        letter-spacing: 0.5px;
+        font-size: 20px;
+    }
+
+    &__link{
+        display: none;
+
+        @media screen and (min-width: $sizeDesktop){
+            display: block;
+        }
+    }
+
+    &__arrows{
+        display: none;
+
+        @media screen and (min-width: $sizeDesktop){
+            display: block;
+        }
+    }
+}
+
+@import "header-tabs";

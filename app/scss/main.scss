@@ -4,14 +4,18 @@
 @import "layout/module";
 
 @import
-    "../../node_modules/slick-carousel/slick/slick.scss", //Slick-carousel
-    "../../node_modules/slick-carousel/slick/slick-theme.scss", //Slick-carousel
-    "components/slider-banner",
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel", //Owl-carousel
+    "../../node_modules/owl.carousel/dist/assets/owl.theme.default", //Owl-carousel
+    "components/slider-catalog",
+    "components/slider-categories",
+    "components/slider-brands",
+    "components/icons",
     "components/catalog-item";
 
 @import
     "components/header",
     "components/banner",
+    "components/header-top-block",
     "components/features",
     "components/hot-news",
     "components/banner-2",
@@ -20,18 +24,3 @@
     "components/brands",
     "components/watched",
     "components/footer";
-
-
-
-
-// ----Header----
-
-// ----banner----
-// ----features----
-// ----hot-news----
-// ----banner-2----
-// ----may-be-useful----
-// ----categories----
-// ----brands----
-// ----watched----
-// ----footer----

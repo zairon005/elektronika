@@ -1,34 +1,72 @@
 .slider-banner{
     grid-column: 1/-1;
+    height: 112px;
 
-    &.slick-dotted.slick-slider{
-        margin-bottom: 0;
+    @media (min-width: $sizeTablet) {
+        height: 210px;
     }
 
-    & img{
-        max-width: 100%;
+    @media screen and (min-width: $sizeDesktop) {
+        height: 390px;
+    }
+
+    & .owl-stage-outer{
         border-radius: 5px;
     }
 
-    & .slick-dots{
-        bottom: 15px;
+    & .owl-dots{
+        position: absolute;
+        bottom: 10px;
         left: 13px;
         text-align: left;
+    }
 
-        & li{
-            margin: 0 2px;
+    & img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    & .owl-nav{
+        position: absolute;
+        width: 80px;
+        display: none;
+        bottom: 10px;
+        right: 60px;
+        @media screen and (min-width: $sizeDesktop) {
+            display: block;
         }
 
-        & li button:before{
-            color:$white;
-            font-size: 20px;
-            opacity: 0.6;
+        & [class*=owl-]:hover{
+            background: transparent;
         }
 
-        & li.slick-active button:before{
-            color:$white;
-            font-size: 40px;
-            opacity: 0.9;
+        & .owl-prev, .owl-next{
+            height: 30px;
+            width: 30px;
+        }
+
+        & .owl-prev{
+
+            & img{
+                transform: rotate(180deg);
+            }
         }
     }
+
+    & .owl-dots .owl-dot span{
+        background: $white;
+        opacity: .6;
+    }
+
+    & .owl-dots .owl-dot.active span{
+        width: 12px;
+        height: 12px;
+        background: $white;
+        opacity: 1;
+    }
+
+    & button{
+        outline: none;
+    }
+
 }

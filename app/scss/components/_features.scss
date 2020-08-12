@@ -1,11 +1,13 @@
 .features{
 
+    margin-bottom: 40px;
+
     &__item{
         grid-column: span 4;
         display: flex;
         justify-content: flex-start;
         margin-bottom: 20px;
-        @media (min-width: $sizeDesktop){
+        @media screen and (min-width: $sizeDesktop){
             grid-column: span 3;
         }
     }

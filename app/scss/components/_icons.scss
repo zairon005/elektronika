@@ -1,0 +1,19 @@
+.icon-basket{
+    width: 19px;
+    height: 24px;
+    display: block;
+    &--top{
+        width: 24px;
+        height: 30px;
+    }
+}
+
+.icon-search-button{
+    width: 20px;
+    height: 20px;
+    display: block;
+    & svg{
+        fill: $red;
+    }
+    
+}
