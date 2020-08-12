@@ -4,7 +4,51 @@
         padding-left: 0 !important;
     }
 
+    & .owl-stage-outer{
+        @media screen and (min-width: $sizeDesktop) {
+            padding: 40px 0;
+            padding-left: 40px;
+        }    
+
+    }
+
     & .owl-item img{
         width: auto;
+    }
+
+    & .owl-nav{
+        position: absolute;
+        width: 80px;
+        display: none;
+        top: -32px;
+        right: 0px;
+        margin-top: 0;
+        @media screen and (min-width: $sizeDesktop) {
+            display: block;
+        }
+
+        & button{
+            outline: none;
+        }
+
+        & [class*=owl-]:hover{
+            background: transparent;
+        }
+
+        & .owl-prev, .owl-next{
+            height: 30px;
+            width: 30px;
+
+            &:hover svg{
+                fill: $red;
+            }
+        }
+
+        & .owl-prev{
+
+            & svg{
+                transform: rotate(180deg);
+            }
+        }
     }
 }

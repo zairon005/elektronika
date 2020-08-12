@@ -1,3 +1,7 @@
 .hot-news{
     margin-bottom: 60px;
+
+    @media screen and (min-width: $sizeDesktop){
+        margin-bottom: 50px;
+    }
 }

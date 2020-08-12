@@ -1,3 +1,10 @@
 .may-be-useful{
-    margin-bottom: 55px;
+    margin-bottom: 30px;
+
+    &__slider{
+
+        & .owl-nav{
+            top: -41px
+        }
+    }
 }

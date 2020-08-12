@@ -7,6 +7,7 @@
 
         @media (min-width: $sizeTablet){
             align-items: baseline;
+            // grid-auto-flow: dense;
         }
     }
 
@@ -19,6 +20,7 @@
 
         @media screen and (min-width: $sizeDesktop){
             grid-column: span 3;
+            grid-row: 1/2;
         }
     }
 
@@ -43,13 +45,38 @@
 
         @media (min-width: $sizeTablet){
             grid-column: 1/5;
-            grid-row: 4/5;
+            grid-row: 3/4;
+            margin-top: 62px;
         }
 
         @media screen and (min-width: $sizeDesktop){
             grid-column: span 3;
+            margin-top: 25px;
         }
-    }    
+    }  
+    
+    &__contacts-wrapp{
+        grid-column: 1/-1;
+
+        @media screen and (min-width: $sizeTablet){
+            grid-column: span 4;  
+            grid-row: span 2; 
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-column: -1/-4;  
+            grid-row: 1/4; 
+        }
+    }
+
+    &__contacts-header{
+        font-size: 14px;
+        margin-bottom: 30px;   
+        display: block;  
+        @media screen and (min-width: $sizeTablet){
+            display: none; 
+        }
+    }
 
     &__contact{
         grid-column: 1/-1;
@@ -77,6 +104,7 @@
 
         @media screen and (min-width: $sizeDesktop){
             grid-column: span 3;
+            margin-top: 50px;
         }
 
         & .icon{
@@ -92,6 +120,12 @@
 
         @media (min-width: $sizeTablet){
             grid-column: span 4;
+            // grid-row: 1/4;
+        }
+
+        @media (min-width: $sizeDesktop){
+            grid-column: span 3;
+            grid-row: 1/4;
         }
     }
 }

@@ -4,6 +4,10 @@
     &__slider{
         grid-column: 1/-1;
     }
+
+    @media screen and (min-width: $sizeDesktop){
+        margin-bottom: 15px;
+    }
 }
 
 .brands-item{
@@ -12,6 +16,18 @@
     background-color: $not-white;
     border-radius: 5px;
     padding: 15px;
+
+    @media screen and (min-width: $sizeDesktop){
+        width: 160px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+            background-color: $not-white;
+            box-shadow: 0px 9px 36px 0 rgba(38, 57, 73, 0.45);
+        }
+    }
 
     &__link{
         display: block;
@@ -23,6 +39,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (min-width: $sizeDesktop){
+            width: 130px;
+            height: 50px;
+        }
     }
 
     &__img{

@@ -2,7 +2,10 @@
     grid-column: 1/-1;
 
     & .owl-stage-outer{
-        padding: 40px;
+        @media screen and (min-width: $sizeDesktop) {
+            padding: 40px 0;
+            padding-left: 40px;
+        }    
     }
 
     & .owl-stage{
@@ -13,8 +16,9 @@
         position: absolute;
         width: 80px;
         display: none;
-        top: -72px;
+        top: -31px;
         right: 0px;
+        margin-top: 0;
         @media screen and (min-width: $sizeDesktop) {
             display: block;
         }
