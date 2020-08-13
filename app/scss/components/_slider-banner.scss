@@ -56,11 +56,12 @@
     & .owl-dots .owl-dot span{
         background: $white;
         opacity: .6;
+        width: 6px;
+        height: 6px;
     }
 
     & .owl-dots .owl-dot.active span{
-        width: 12px;
-        height: 12px;
+        transform: scale(1.8);
         background: $white;
         opacity: 1;
     }

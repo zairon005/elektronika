@@ -4,6 +4,10 @@
     background-color: $not-white;
     border-radius: 5px;
 
+    @media screen and (min-width: $sizeDesktop){
+        width: 260px;
+    }
+
     &:hover{
         @media screen and (min-width: $sizeDesktop){
             background-color: $not-white;
@@ -75,5 +79,17 @@
         justify-content: center;
         align-items: center;
         border-radius: 5px;
+
+        & svg{
+            fill: $red;
+        }
+
+        &:hover{
+            background: $green;
+
+            & svg{
+                fill: $white;
+            }
+        }
     }
 }

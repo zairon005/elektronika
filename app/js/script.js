@@ -21,9 +21,11 @@ $(".slider-catalog").owlCarousel({
             items: 2
         },
         1200: {
+            stagePadding: 0,
             items: 4,
             autoWidth: false,
             nav: true,
+            margin: 40,
             navText: [
                 '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  fill="#707180"> \
                 <g> \
