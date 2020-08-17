@@ -10,7 +10,10 @@
     }
 
     & .header-top-block{
-        margin-bottom: 0;
+
+        @media screen and (min-width: $sizeDesktop){
+            margin-bottom: 0;    
+        }        
     }
 }
 
@@ -21,6 +24,7 @@
     border-radius: 5px;
 
     @media screen and (min-width: $sizeDesktop){
+        width: 260px;
         
         &:hover{
             background-color: $not-white;

@@ -57,7 +57,8 @@ $(".slider-categories").owlCarousel({
         },
         1200: {
             items: 4,
-            autoWidth: false,
+            margin:40,
+            // autoWidth: false,
             nav: true,
             navText: [
                 '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  fill="#707180"> \
@@ -84,7 +85,8 @@ $(".slider-brands").owlCarousel({
     responsive: {
         1200: {
             items: 6,
-            autoWidth: false,
+            margin:40,
+            // autoWidth: false,
             nav: true,
             navText: [
                 '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  fill="#707180"> \
@@ -117,8 +119,13 @@ $(window).on('load resize', function () {
             // nav: true        
         });
     }
-  })
+  });
 
+  if (window.innerWidth > 659){
+    let topPos = $('.footer-menu__list').first().children().last().position().top;
+  $('.footer-menu__list').last().children().last().css('position','absolute').css('top', topPos);
+  }
+  
   
 
 

@@ -1,93 +1,114 @@
 .footer{
     background-color: $dark;
     padding-top: 60px;
+    padding-bottom: 60px;
     color: $white;
 
     & .container{
 
         @media (min-width: $sizeTablet){
+            align-items: start;
+            grid-template-rows: repeat(6, auto);
+        }
+
+        @media screen and (min-width: $sizeDesktop){
             align-items: baseline;
-            // grid-auto-flow: dense;
+            grid-template-rows: repeat(3, auto);
         }
     }
 
     &__logo{
-        grid-column: 1/-1;
+        grid-column: span 4;
 
         & a{
             color: $white;
         }
 
+        @media (min-width: $sizeTablet){
+            grid-row: 1/2;
+            grid-column: 1/5;
+            margin-bottom: 40px;
+        }
+
         @media screen and (min-width: $sizeDesktop){
-            grid-column: span 3;
+            grid-column: 1/4;
             grid-row: 1/2;
         }
     }
 
     &__copyright-text{
-        grid-column: 1/-1;
+        grid-column: span 4;
+        grid-row: 2/3;
         margin-top: 30px;
 
         @media (min-width: $sizeTablet){
-            grid-column: 1/5;
+            margin-top: 0;
+            margin-bottom: 60px;
         }
 
         @media screen and (min-width: $sizeDesktop){
-            grid-column: span 3;
             grid-row: 2/3;
+            grid-column: 1/4;
+            margin-bottom: 0;
         }
     }
 
     &__copyright{
-        grid-column: 1/-1;
+        grid-column: span 4;
+        grid-row: 3/4;
         margin-top: 25px;
         margin-bottom: 60px;
 
         @media (min-width: $sizeTablet){
-            grid-column: 1/5;
             grid-row: 3/4;
-            margin-top: 62px;
+            margin-top: 0;
+            margin-bottom: 0;
+            align-self: end;
         }
 
         @media screen and (min-width: $sizeDesktop){
-            grid-column: span 3;
-            margin-top: 25px;
+            grid-column: 1/4;
+            grid-row: 3/4;
+            margin-bottom: 0;
+            align-self: start;    
+            margin-top: 8px;   
         }
     }  
-    
-    &__contacts-wrapp{
-        grid-column: 1/-1;
 
-        @media screen and (min-width: $sizeTablet){
-            grid-column: span 4;  
-            grid-row: span 2; 
-        }
+    &__contacts-header{
+        font-size: 14px;  
+        display: none;  
 
         @media screen and (min-width: $sizeDesktop){
-            grid-column: -1/-4;  
-            grid-row: 1/4; 
+            display: block; 
+            grid-row: 1/2;
+            grid-column: 10/13;
+            margin-bottom: 0;
         }
     }
 
-    &__contacts-header{
-        font-size: 14px;
-        margin-bottom: 30px;   
-        display: block;  
-        @media screen and (min-width: $sizeTablet){
-            display: none; 
+    &__contact-block{
+        grid-column: span 4;
+
+        @media (min-width: $sizeTablet){
+            grid-row: 2/3;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-row: 2/3;
+            grid-column: 10/13;
         }
     }
 
     &__contact{
-        grid-column: 1/-1;
         margin-bottom: 25px;
 
         @media (min-width: $sizeTablet){
-            grid-column: 5/9;
+
         }
 
         @media screen and (min-width: $sizeDesktop){
-            grid-column: span 3;
+            
         }
     }    
 
@@ -96,15 +117,16 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 60px;
 
         @media (min-width: $sizeTablet){
-            grid-column: 5/9;
+            grid-row: 3/4;
+            grid-column: span 4;
+            margin-bottom: 0;
         }
 
         @media screen and (min-width: $sizeDesktop){
-            grid-column: span 3;
-            margin-top: 50px;
+            grid-column: 10/13;
+            grid-row: 3/4;
         }
 
         & .icon{
@@ -116,16 +138,14 @@
 
     &__menu{
         grid-column: 1/-1;
-        margin-bottom: 55px;
+        margin-top: 60px;
 
         @media (min-width: $sizeTablet){
             grid-column: span 4;
-            // grid-row: 1/4;
         }
 
-        @media (min-width: $sizeDesktop){
+        @media screen and (min-width: $sizeDesktop){
             grid-column: span 3;
-            grid-row: 1/4;
         }
     }
 }
@@ -151,12 +171,39 @@
 
     &__header{
         font-size: 14px;
+        grid-column: span 4;
+        margin-top: 60px;
+
+        @media (min-width: $sizeTablet) {
+            grid-row: 4/5;
+            grid-column: span 4;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-row: 1/2;
+            grid-column: span 3;
+            margin-top: 0;
+        }
+        
     }
 
     &__list{
         margin-top: 30px;
         list-style: none;
         padding-left: 0;
+        position: relative;
+        grid-column: span 4;
+
+        @media (min-width: $sizeTablet) {
+            grid-row: 5/6;
+            grid-column: span 4;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-row: 2/4;
+            grid-column: span 3;
+            margin-top: 0;
+        }
     }
 
     &__item{
