@@ -133,6 +133,10 @@
             width: 20px;
             height: 20px;
             margin-right: 30px;
+
+            &:hover{
+                opacity: 0.63;
+            }
         }
     }
 
@@ -213,5 +217,9 @@
     &__link{
         text-decoration: none;
         color: $grey;
+
+        &:hover{
+            color: $white;
+        }
     }
 }

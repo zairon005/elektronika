@@ -3,6 +3,7 @@
 
 @import "layout/module";
 
+
 @import
     "../../node_modules/owl.carousel/dist/assets/owl.carousel", //Owl-carousel
     "../../node_modules/owl.carousel/dist/assets/owl.theme.default", //Owl-carousel
@@ -21,4 +22,5 @@
     "components/categories",
     "components/brands",
     "components/watched",
-    "components/footer";
+    "components/footer",
+    "components/mobile-menu";

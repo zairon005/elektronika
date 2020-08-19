@@ -1,15 +1,17 @@
 .search{
-    grid-column: 1/-1;
 
-    @media (min-width: $sizeTablet) {
-        grid-column: -1/-2;
-        width: 40px;
-        justify-self: end;
-    }
+    &--active{
+        width: 620px !important;
+        z-index: 10;
 
-    @media screen and (min-width: $sizeDesktop) {
-        grid-column: 1/4;
-        width: 100%;
+        .search__input{
+            padding-left: 20px;
+            padding-right: 40px;
+
+            &::placeholder{
+                opacity: 1;
+            }
+        }
     }
 
     &__form{
@@ -34,7 +36,12 @@
             font-size: 14px;
             letter-spacing: 0.3px;
             padding-left: 0;
-            opacity: 0;
+            opacity: 1;
+
+            @media (min-width: $sizeTablet) {
+                opacity: 0;
+            }
+
             @media screen and (min-width: $sizeDesktop) {
                 opacity: 1;
             }
@@ -57,6 +64,7 @@
     &__button{
         border: none;
         background-color: transparent;
+        outline: none;
     }
 
     &__button-div{

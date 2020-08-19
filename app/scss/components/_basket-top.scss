@@ -1,13 +1,9 @@
 .basket{
-    grid-column: -2/-3;
+    
     text-align: right;
     display: flex;
     justify-content: flex-end;
     position: relative;
-
-    @media screen and (min-width: $sizeDesktop) {
-        grid-column: -1/-2;
-    }
 
     &__count{
         width: 18px;

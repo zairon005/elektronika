@@ -1,8 +1,139 @@
 .mobile-menu{
-    &--closed{
-        display: none;
+    width: 85%;
+    background-color: $dark;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1100;
+    display: none;
+    flex-direction: column;
+    padding-top: 26px;
+    padding-left: 30px;
+    padding-bottom: 60px;
+
+    @media (min-width: $sizeTablet){
+        width: 50%;
     }
+
+
     @media screen and (min-width: $sizeDesktop){
         display: none;
+    }
+
+    &__overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: none;
+    }    
+
+    &--active{
+        display: flex;
+
+        &+.mobile-menu__overlay{
+            display: block;
+
+            @media screen and (min-width: $sizeDesktop){
+                display: none;
+            }
+        }
+    }
+
+    &__basket{
+        justify-content: start;
+
+        .basket-icon{
+            fill: $white;
+        }
+
+        .basket__value{
+            display: block;
+            margin-left: 20px;
+            color: $white;
+        }
+    }
+
+    &__catalog-nav{
+        margin-top: 60px;
+
+        .catalog-nav__item{
+            margin-bottom: 30px;
+
+            .catalog-nav__img{
+                margin-right: 40px;
+            }
+        }
+
+        .catalog-nav__list{
+            flex-direction: column;
+        }
+    }
+
+    &__top-menu{
+        display: block;
+        margin-top: 60px;
+
+        @media (min-width: $sizeTablet){
+            padding-left: 70px;
+        }
+
+        .top-menu__list{
+            flex-direction: column;
+
+            .top-menu__item{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__contact-block{
+        margin-top: 60px;
+    }
+
+    &__contact{
+        margin-bottom: 25px;    
+    }
+
+    &__socials{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 60px;
+
+        
+
+        & .icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 30px;
+
+            &:hover{
+                opacity: 0.63;
+            }
+        }
+    }
+
+    
+}
+
+.mobile-menu-contact{
+
+    &__main{
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 0.45px;
+        color: $white;
+        display: block;
+    }
+
+    &__desk{
+        color: $red;
+        font-size: 12px;
     }
 }
