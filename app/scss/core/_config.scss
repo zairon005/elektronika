@@ -13,7 +13,7 @@ $slate-grey: #555664;
 $white: #ffffff;
 
 // FONTS LOAD SECTION
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 // Text
 $textColor: $grey; 
@@ -44,6 +44,18 @@ $gridGapMobile: 20px;
     align-items: center;
 }
 
+@mixin media-tablet{
+    @media (min-width: $sizeTablet){
+        @content;
+    }
+}
+
+@mixin media-desktop{
+    @media screen and (min-width: $sizeDesktop){
+        @content;
+    }
+}
+
 // IMPORT SECTION
 
 @import '../../../node_modules/normalize-scss/sass/normalize/import-now'; // Normilize.css
@@ -59,6 +71,7 @@ body{
 	font-size: $fontsize;
     color: $textColor;
     letter-spacing: 0.35px;
+    font-weight: 500;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -78,6 +91,7 @@ body{
 
     &--scrol-non{
         overflow: hidden;
+        // padding-right: 15px;
     }
 
 }

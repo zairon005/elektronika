@@ -1,0 +1,19 @@
+.breadcrumbs-section{    
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: none;
+
+    @media (min-width: $sizeTablet){
+        display: block;
+    }
+
+    @media screen and (min-width: $sizeDesktop){
+        margin-bottom: 30px;
+    }
+
+    .breadcrumbs{
+        grid-column: 1/-1;
+    }
+}
+
+@import "breadcrumbs";

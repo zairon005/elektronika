@@ -1,7 +1,47 @@
+@import "header-top-block";
+
 .watched{
     background-color: $not-white;
     padding-top: 60px;
     padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr repeat($colCountMobile, $colSize) 1fr;
+    column-gap: $gridGapMobile;
+
+    @media (min-width: $sizeTablet){
+        grid-template-columns: 1fr repeat($colCountTablet, $colSize) 1fr;
+    }
+
+    @media screen and (min-width: $sizeDesktop){
+        grid-template-columns: 1fr repeat($colCountDesktop, $colSize) 1fr;
+        column-gap: $gridGap;
+    }
+
+    .header-top-block{
+        grid-column: 2/span $colCountMobile;
+
+        @media (min-width: $sizeTablet){
+            grid-column: 2/span $colCountTablet;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-column: 2/span $colCountDesktop;
+        }        
+    }
+
+    &__slider{
+
+        grid-column: 2/span $colCountMobile+1;
+
+        @media (min-width: $sizeTablet){
+            grid-column: 2/span $colCountTablet+1;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-column: 2/span $colCountDesktop;
+        }  
+
+    }
 
     & .catalog-item{
         background-color: $white;

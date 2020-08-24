@@ -4,14 +4,15 @@
     overflow-y: auto;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100vh;
     height: 100vh;
-    z-index: 1100;
-    display: none;
+    z-index: -1;
+    opacity: 0;
     flex-direction: column;
     padding-top: 26px;
     padding-left: 30px;
     padding-bottom: 60px;
+    transition: all 0.3s;
 
     @media (min-width: $sizeTablet){
         width: 50%;
@@ -26,18 +27,28 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0);
         top: 0;
         left: 0;
-        z-index: 1000;
-        display: none;
+        z-index: -1;
+        transition: background-color .3s;
+        display: block;
+
+        @media screen and (min-width: $sizeDesktop){
+            display: none;
+        }
     }    
 
     &--active{
         display: flex;
+        opacity: 1;
+        z-index: 1100;
+        right: 0;
 
         &+.mobile-menu__overlay{
-            display: block;
+            
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
 
             @media screen and (min-width: $sizeDesktop){
                 display: none;

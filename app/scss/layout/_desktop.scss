@@ -2,4 +2,11 @@
     .container{
         @include container($containerDesktop, $colCountDesktop, $gridGap);
     }
+
+    .grid{        
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr repeat($colCountDesktop, $colSize) 1fr;
+        column-gap: $gridGap;
+    }
 }

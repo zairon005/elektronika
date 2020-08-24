@@ -138,7 +138,6 @@ $(window).on('load resize', function () {
         $('.button-menu__toggle').toggleClass('button-menu__toggle2');
         $('.mobile-menu').toggleClass('mobile-menu--active');
         $('.page').toggleClass('page--scrol-non');
-
     })
   });
 

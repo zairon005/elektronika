@@ -17,7 +17,7 @@ let paths = {
     },
 
     styles: {
-        src:  baseDir + '/scss/main.*',
+        src:  baseDir + '/scss/*.scss',
         dest: baseDir + '/css',
     },
 
@@ -37,11 +37,13 @@ const { src, dest, parallel, series, watch } = require('gulp');
 const scss         = require('gulp-sass');
 const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
+const purge 	   = require('gulp-css-purge');
 const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const newer        = require('gulp-newer');
+const sourcemaps   = require('gulp-sourcemaps');
 const del          = require('del');
 
 function browsersync() {
@@ -62,10 +64,13 @@ function scripts() {
 
 function styles() {
 	return src(paths.styles.src)
+	.pipe(sourcemaps.init())
 	.pipe(scss())
-	.pipe(concat(paths.cssOutputName))
+	// .pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	// .pipe(purge())
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+	.pipe(sourcemaps.write())
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
@@ -95,6 +100,7 @@ function startwatch() {
 function buildRes(){
 	return src([ // Выбираем нужные файлы
 		'app/css/**/*.min.css',
+		'app/css/**/*.css',
 		'app/js/**/*.min.js',
 		'app/images/dest/**/*',
 		'app/**/*.html',

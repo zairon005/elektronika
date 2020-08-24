@@ -1,0 +1,36 @@
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+
+    &__item{
+        color: $grey;
+        font-size: 12px;
+        letter-spacing: 0.3px ;
+    }
+
+    &__item-name{
+
+        &--active{
+            color: $red;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $grey;
+    }
+
+    &__separator{
+        margin-left: 18px;
+        margin-right: 18px;
+        display: block;
+        width: 20px;
+        height: 2px;
+        font-size: 0;
+        background-color: $grey;
+
+        &--active{
+            background-color: $red;
+        }
+    }
+}
