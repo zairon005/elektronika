@@ -1,0 +1,22 @@
+@import "core/config";
+
+
+@import "layout/module";
+
+
+@import
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel", //Owl-carousel
+    "../../node_modules/owl.carousel/dist/assets/owl.theme.default", //Owl-carousel
+    "components/slider-catalog",
+    "components/icons",
+    "components/catalog-item",
+    "components/header-top-block";
+
+@import
+    "components/header",
+    "components/hot-news",
+    "components/banner-2",
+    "components/catalog-categories",
+    "components/watched",
+    "components/footer",
+    "components/mobile-menu";
