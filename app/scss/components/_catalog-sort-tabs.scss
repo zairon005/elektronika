@@ -1,0 +1,44 @@
+.catalog-sort-tabs{
+
+    padding-right: 40px;
+
+    @include media-desktop{
+        padding-right: 0;
+    }
+
+    .header-tabs__list{
+        margin-top: 0;
+    }
+
+    .header-tabs__item{
+
+        &--active{
+            
+            padding-right: 24px;
+            position: relative;
+            padding-left: 6px;
+
+            &::after{
+                background: url('../images/dest/icons/sort.svg') center center no-repeat;
+                content: '';
+                width: 14px;
+                height: 6px;
+                top: 9px;
+                right: 5px;
+                display: block;
+                position: absolute;
+            }
+
+        }
+    }
+}
+
+.catalog-per-page{
+
+    .header-tabs{
+
+        &__list{
+            margin-top: 0;
+        }
+    }
+}

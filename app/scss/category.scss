@@ -1,0 +1,27 @@
+@import "core/config";
+
+
+@import "layout/module";
+
+
+@import
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel", //Owl-carousel
+    "../../node_modules/owl.carousel/dist/assets/owl.theme.default", //Owl-carousel
+    "components/slider-catalog",
+    "components/icons",
+    "components/catalog-item",
+    "components/header-top-block";
+
+@import
+    "components/header",
+    "components/breadcrumbs-section",
+    "components/banner-2",
+    "components/hot-news",
+    "components/info",
+    "components/content-catalog",
+    "components/catalog-sort-tabs",
+    "components/catalog",
+    "components/catalog-filter",
+    "components/watched",
+    "components/footer",
+    "components/mobile-menu";
