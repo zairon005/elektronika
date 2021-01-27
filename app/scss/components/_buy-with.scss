@@ -1,0 +1,41 @@
+.buy-with{
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr repeat($colCountMobile, $colSize) 1fr;
+    column-gap: $gridGapMobile;
+    margin-top: 50px;
+
+    @media (min-width: $sizeTablet){
+        grid-template-columns: 1fr repeat($colCountTablet, $colSize) 1fr;
+    }
+
+    @media screen and (min-width: $sizeDesktop){
+        margin-bottom: 50px;
+        grid-template-columns: 1fr repeat($colCountDesktop, $colSize) 1fr;
+        column-gap: $gridGap;
+    }
+
+    .header-top-block{
+        grid-column: 2/span $colCountMobile;
+
+        @media (min-width: $sizeTablet){
+            grid-column: 2/span $colCountTablet;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-column: 2/span $colCountDesktop;
+        }        
+    }
+
+    &__slider{
+        grid-column: 2/span $colCountMobile+1;
+
+        @media (min-width: $sizeTablet){
+            grid-column: 2/span $colCountTablet+1;
+        }
+
+        @media screen and (min-width: $sizeDesktop){
+            grid-column: 2/span $colCountDesktop;
+        }   
+    }
+}

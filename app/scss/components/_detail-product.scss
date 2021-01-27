@@ -1,0 +1,633 @@
+.detail-product{
+
+    &__header{
+        grid-column: 1/-1   ;
+
+        font-size: 20px;
+        font-weight: bold;
+        color: $dark;
+        margin-top: 55px;
+
+        @include media-tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__product-code{
+        grid-column: 1/-1;
+
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        @include media-desktop{
+            grid-column: 7/11;
+            margin-top: 0;
+            align-self: flex-start;
+        }
+    }
+
+    &__link-brand{
+        padding: 3px 5px;
+        border-radius: 5px;
+        background-color: $light-white;
+        text-decoration: none;
+        color: $dark;
+        font-size: 14px;
+    }
+
+    &__img-carousel{
+        grid-column: 1/-1;
+        margin-top: 25px;
+
+        @include media-tablet{
+            display: flex;
+            max-height: 405px;
+            justify-content: space-between;
+        }
+
+        @include media-desktop{
+            grid-column: 1/7;
+            margin-top: 0;
+            grid-row: 2/8;
+            align-self: flex-start;
+        }
+    }
+
+    &__img-carousel-slider{
+
+        @include media-tablet{
+            width: 540px;
+            height: 405px;
+        }
+
+        @include media-desktop{
+            width: 460px;
+            height: 345px;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__img-carousel-carousel{
+        width: 100%;
+        margin-top: 10px;
+
+        @include media-tablet{
+            width: 60px;
+            order: -1;
+            margin-top: 0;
+        }
+
+        @include media-desktop{
+            height: 345px;
+            overflow: hidden;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        .slick-prev, .slick-next{
+            height: 45px;
+            width: 20px;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            @include media-tablet{
+                width: 60px;
+                height: 20px;
+
+                svg{
+                    max-height: 100%;
+                    width: auto;
+                }
+            }
+        }
+
+        .slick-prev{
+            position: absolute;
+            z-index: 2;
+            background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
+            outline: none;
+
+            @include media-tablet{
+                background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0));
+            }
+
+            svg{
+                transform: rotate(180deg);
+
+                @include media-tablet{
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        .slick-next{
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: 0;
+            outline: none;
+            background: linear-gradient(270deg, rgba(255,255,255,1), rgba(255,255,255,0));
+
+            @include media-tablet{
+                bottom: 0;
+                top: initial;
+                background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+
+                svg{
+                    transform: rotate(90deg);
+                }
+            }
+        }        
+    }
+
+    &__price{
+        grid-column: 1/3;
+        grid-row: 4/5;
+        margin-top: 60px;
+        color: #272838;
+        font-size: 21px;
+        align-self: flex-start;
+
+        @include media-tablet{
+            font-size: 32px;
+        }
+
+        @include media-desktop{
+            grid-column: 11/13;
+            grid-row: 2/3;
+            margin-top: 0;
+        }
+    }
+
+    &__discount-block{
+        grid-column: 3/5;
+        grid-row: 4/5;
+        margin-top: 60px;
+        align-self: flex-start;
+
+        @include media-desktop{
+            grid-column: 11/13;
+            grid-row: initial;
+            margin-top: 10px;
+        }
+    }
+
+    &__benefit{
+        color: #fff;
+        background-color: #86ce08;
+        border-radius: 5px;
+        padding: 0 2px;
+    }
+
+    &__old-price{
+        color: #707180;
+        text-decoration: line-through;
+        margin-right: 10px;
+    }
+
+    &__amount-item{
+        grid-column: 1/3;
+        align-self: flex-start;
+
+        @include media-tablet{
+            grid-column: 5/7;
+        }
+
+        @include media-desktop{
+            grid-column: 11/13;
+        }
+    }
+
+    &__amount-block{
+        width: 140px;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 2px $light-white;
+        
+        position: relative;
+        padding-left: 36px;
+        padding-right: 36px;
+        margin-bottom: 25px;
+        align-self: flex-start;
+        margin-top: 30px;
+
+        @include media-tablet{
+            // margin-bottom: 20px;
+            margin-top: 60px;
+        }
+
+        @include media-desktop{
+            width: 160px;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__amount-btn-minus,&__amount-btn-plus{
+        position: absolute;
+        width: 36px;
+        cursor: pointer;
+        height: 36px;
+        border: none;
+        text-align: center;
+        line-height: 36px;
+        color: $red;
+        font-size: 23px;
+    }
+
+    &__amount-btn-minus{
+        left: 0;
+        top: 0;
+    }
+
+    &__amount-btn-plus{
+        right: 0;
+        top: 0;
+        padding-top: 1px;
+    }
+
+    &__amount-input{
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        line-height: 36px;
+        width: 100%;
+        font-size: 18px;
+        color: $grey;
+    }
+
+    &__basket{
+        grid-column: 3/5;
+        align-self: flex-start;
+        border-radius: 5px;
+        background: $green;
+        margin-top: 30px;
+
+        @include media-tablet{
+            grid-column: 7/9;
+            margin-top: 60px;
+        }
+
+        @include media-desktop{
+            grid-column: 11/13;
+            margin-top: 0;
+            align-self: flex-start;
+            margin-top: 5px;
+        }
+
+    }
+
+    &__basket-button{       
+        color: $white;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        cursor: pointer;
+
+        .icon-basket{
+            margin-right: 10px;
+
+            svg{
+                fill: $white;
+            }
+        }
+    }
+
+    &__short-decription{
+        display: none;
+
+        @include media-desktop{
+            display: block;
+            grid-column: 7/11;
+            margin-top: 15px;
+            grid-row: 4/7;
+            align-self: flex-start;
+        }
+    }
+
+    &__links-more{
+        display: none;
+        justify-content: space-between;
+        align-self: flex-end;
+
+        @include media-desktop{
+            display: flex;
+            grid-column: 7/13;
+            grid-row: 7/8;           
+        }
+    }
+
+    &__more-link{
+        color: $red;
+        text-decoration: none;
+
+        &:last-child{
+            margin-right: 42px;
+        }
+        &:hover{
+            opacity: 0.65;
+        }
+    }
+
+    &__features{
+        display: none;
+
+        @include media-desktop{
+            display: flex;
+            grid-column: 1/-1;
+            margin-top: 80px;
+        }
+    }
+
+    &__button-question{
+        display: none;
+
+        @include media-desktop{
+            // display: block;
+        }
+    }
+
+    &__information-block{
+        grid-column: 1/-1;
+        
+    }
+
+    &__tabs{
+        display: none;
+        border-bottom: 1px solid $light-white;
+
+        @include media-tablet{
+            display: block;
+        }
+    }
+
+    &__tabs-list{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__tabs-item{
+        padding: 30px 0;
+        color: $dark;
+        margin-right: 30px;
+        cursor: pointer;
+
+        &--active{
+            border-bottom: 1px solid $red;
+        }        
+    }
+
+    &__tab-pane{
+
+        margin-top: 50px;
+
+        @include media-tablet{
+            margin-top: 30px;
+            display: none;
+
+            &--active{
+                display: block;
+            }
+        }
+
+        h2{
+            color: $dark;
+            font-weight: bold;
+            font-size: 14px;
+
+            @include media-tablet{
+                display: none;
+            }
+        }
+    }
+
+    &__spec-wrap{
+
+        @include media-desktop{
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            column-gap: 45px;
+        }      
+
+    }
+
+    &__spec-info-icon-block{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__spec-icon-item{
+        width: 60px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $light-white;
+        margin-right: 20px;
+
+        @include media-tablet{
+            width: 100px;
+            height: 50px;
+            padding: 25px;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__tech-prop-block{
+        margin-top: 50px;
+
+        @include media-desktop{
+            margin-top: 0;
+        }
+    }
+
+    &__accordeon-item{
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        border-bottom: 1px solid $light-white;
+
+        &--close{          
+        }
+
+        &--open{
+            max-height: 1000px;
+        }
+    }
+
+    &__accordeon-heading{
+        cursor:pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $dark;
+        font-size: 14px;
+
+        .arrow__down{
+            width: 14px;
+            height: 14px;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            pointer-events: none;
+
+            svg{
+                max-width: 100%;                
+            }
+        }
+
+        &--active{
+            .arrow__down{
+                transform: rotate(90deg);
+            }
+        }
+
+    }
+
+    &__accordeon-prop-item{
+
+        margin-bottom: 10px;
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-between;
+        @include media-tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }        
+    
+        &:last-child{
+            margin-bottom: 25px;
+        }
+    }
+
+    &__accordeon-prop-item-value{
+
+        
+    }
+
+    &__faq-icon-dialog{
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @include media-tablet{
+            order: -1;
+            padding-right: 50px;
+        }
+        
+
+        .icon-dialog-faq{
+            display: block;
+            width: 40px;
+            height: 36px;            
+
+            svg{
+                max-width: 100%;
+                height: auto;
+                fill: $red;
+            }
+        }
+    }
+
+    &__icon-dialog-block{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    &__faq-icon-dialog-text{
+        color: $charcoal-grey;
+        font-size: 12px;
+    }
+
+    &__faq-info-block{
+
+        @include media-tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
+
+
+
+
+
+
+.slider-for{
+
+    &__item{
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        background-color: $light-white;
+        width: 300px;
+        height: 225px;
+        padding: 20px;
+
+        @include media-tablet{
+            width: 540px;
+            height: 405px;
+            padding: 40px;
+        }
+
+        @include media-desktop{
+            width: 460px;
+            height: 345px;
+        }
+    }
+}
+
+.carousel-nav{
+
+    &__item{
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 45px;
+        margin-right: 10px;
+        outline: none;
+        padding: 5px;
+        background-color: $light-white;
+
+        @include media-tablet{
+            margin-right: 0;
+            margin-top: 20px;
+        }
+
+        &.slick-current{
+            border: solid 2px $red;
+
+            @include media-desktop{
+                border: solid 1px $red;
+            }
+        }
+    }
+}

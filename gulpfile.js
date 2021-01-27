@@ -11,6 +11,8 @@ let paths = {
         src: [
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			'node_modules/owl.carousel/dist/owl.carousel.min.js', //Owl-carousel
+			'node_modules/slick-carousel/slick/slick.min.js', //Owl-carousel
+			'node_modules/flexslider/jquery.flexslider-min.js', //Owl-carousel
             baseDir + '/js/script.js' // Always at the end
         ],
         dest: baseDir + '/js',
@@ -38,6 +40,7 @@ const scss         = require('gulp-sass');
 const cleancss     = require('gulp-clean-css');
 const concat       = require('gulp-concat');
 const purge 	   = require('gulp-css-purge');
+const csso 	  	   = require('gulp-csso');
 const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
@@ -64,13 +67,18 @@ function scripts() {
 
 function styles() {
 	return src(paths.styles.src)
-	.pipe(sourcemaps.init())
+	// .pipe(sourcemaps.init())
 	.pipe(scss())
-	// .pipe(concat(paths.cssOutputName))
+	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	// .pipe(purge())
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
-	.pipe(sourcemaps.write())
+	// .pipe(purge({
+    //         trim : true,
+    //         shorten : true,
+    //         verbose : true
+    //     }))
+	.pipe(csso())
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+	// .pipe(sourcemaps.write())
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
